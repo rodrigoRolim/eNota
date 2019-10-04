@@ -1,0 +1,31 @@
+unit eNota.Controller.NotaFiscal.Interfaces;
+
+interface
+type
+  iCommand = interface
+    ['{9914BAC2-F290-4C79-A286-D75B95A65BB1}']
+    function Execute: iCommand;
+  end;
+  iInvoker = interface
+    ['{DC06F74E-7608-49C4-A72F-573BF77B4DBA}']
+    function Add(Value: iCommand): iInvoker;
+    function Execute: iInvoker;
+  end;
+type
+  iNotaFiscal = interface
+    ['{B1A64831-36E8-40D4-8D18-7240684503F6}']
+    function Criar: iNotaFiscal;
+    function Validar: iNotaFiscal;
+    function Enviar: iNotaFiscal;
+    function Gravar: iNotaFiscal;
+    function Email: iNotaFiscal;
+
+  end;
+
+  iNotaFiscalView = interface
+    ['{66E309E0-842B-41CE-A27E-76A7F725EF6B}']
+    function EnviarNotaSefaz: iNotaFiscal;
+  end;
+implementation
+
+end.

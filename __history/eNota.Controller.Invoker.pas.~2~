@@ -1,0 +1,14 @@
+unit eNota.Controller.Invoker;
+
+interface
+Type
+  TControllerInvoker = class(TInterfacedObject, iInvoker)
+    private
+    public
+      constructor Create;
+      destructor Destroy; override;
+      class function New: iInvoker;
+  end;
+implementation
+
+end.
